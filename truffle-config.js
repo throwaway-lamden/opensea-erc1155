@@ -79,7 +79,15 @@ module.exports = {
       gasPrice: 20000000000
     }
   },
-
+    xDai: {
+      provider: () => new HDWalletProvider(mnemonic, 'https://xdai.poanetwork.dev'),
+      network_id: 100,
+      confirmations: 2,
+      gas: 500000,
+      gasPrice: 1000000000
+      skipDryRun: true
+    },
+}
   // Set default mocha options here, use special reporters etc.
   mocha: {
     reporter: 'eth-gas-reporter',
